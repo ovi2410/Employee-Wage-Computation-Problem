@@ -9,16 +9,15 @@ namespace EmployeeWages
         //Declaring Constant Variable
         public const int FULL_TIME = 1;
         public const int PART_TIME = 2;
-        private string company;
-        private int wagePerhour;
         private int wagePerHour;
         private int maxHoursPerMonth;
+        private string company;
         private int maxWorkingDays;
 
         public CompanyEmpWage(string company, int wagePerhour, int maxHoursPerMonth, int maxWorkingDays)
         {
             this.company = company;
-            this.wagePerhour = wagePerhour;
+            wagePerHour = wagePerhour;
             this.maxHoursPerMonth = maxHoursPerMonth;
             this.maxWorkingDays = maxWorkingDays;
         }
@@ -54,7 +53,7 @@ namespace EmployeeWages
                 for (int i = 0; i < numOfCompany; i++)
                 {
                     companyEmpWageArray[i].setTotalEmpWage(this.ComputeEmpWage(this.companyEmpWageArray[i]));
-                    Console.WriteLine(this.companyEmpWageArray[i].ToString());
+                    Console.WriteLine(this.companyEmpWageArray[i].toString());
                 }
             }
             public int ComputeEmpWage(CompanyEmpWage companyEmpWage)
@@ -101,6 +100,11 @@ namespace EmployeeWages
                 empBuilderWage.addCompanyEmpWage("Accenture", 50, 30, 20);
                 empBuilderWage.ComputeEmpWage();
             }
+        }
+
+        private bool toString()
+        {
+            throw new NotImplementedException();
         }
 
         private void setTotalEmpWage(int v)
