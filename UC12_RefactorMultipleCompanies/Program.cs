@@ -54,7 +54,7 @@ namespace EmployeeWages
                 for (int i = 0; i < numOfCompany; i++)
                 {
                     companyEmpWageArray[i].setTotalEmpWage(this.ComputeEmpWage(this.companyEmpWageArray[i]));
-                    Console.WriteLine(this.companyEmpWageArray[i].toString());
+                    Console.WriteLine(this.companyEmpWageArray[i].ToString());
                 }
             }
             public int ComputeEmpWage(CompanyEmpWage companyEmpWage)
@@ -103,15 +103,11 @@ namespace EmployeeWages
             }
         }
 
-        private bool toString()
-        {
-            throw new NotImplementedException();
-        }
-
         private void setTotalEmpWage(int v)
         {
             throw new NotImplementedException();
         }
     }
 }
+
 
